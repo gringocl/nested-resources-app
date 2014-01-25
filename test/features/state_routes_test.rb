@@ -4,11 +4,11 @@ feature "State Routes" do
   scenario "Visit a State Index Page" do
     visit states_path
     page.must_have_content "Listing states"
-    page.must_have_content states(:FL)
-    page.must_have_content states(:WA)
-    page.must_have_content states(:NC)
-    page.must_have_content states(:HI)
-    page.must_have_content states(:LA)
+    page.must_have_content(states(:FL).name && states(:FL).population)
+    page.must_have_content(states(:WA).name && states(:WA).population)
+    page.must_have_content(states(:NC).name && states(:NC).population)
+    page.must_have_content(states(:HI).name && states(:HI).population)
+    page.must_have_content(states(:LA).name && states(:LA).population)
   end
 
   scenario "Visit a State Show Page" do

@@ -16,6 +16,6 @@ King:
 Charlotte:
   id: 3
   name: Charlotte
-  poulation: 100000
+  population: 100000
   state_id: 3
 
