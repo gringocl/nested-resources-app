@@ -1,11 +1,11 @@
 NestedResources::Application.routes.draw do
-  #root 'states#index'
 
-  resources :states
+  root 'states#index'
 
   resources :states do
     resources :counties
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

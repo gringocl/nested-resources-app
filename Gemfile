@@ -15,7 +15,11 @@ group :doc do
 end
 
 group :development, :test do
+  gem "pry-rails"
   gem "minitest-rails"
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "meta_request"
 end
 
 group :test do

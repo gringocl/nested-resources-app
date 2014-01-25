@@ -1,0 +1,31 @@
+<h1>Listing counties for <%= @state.name %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Population</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @counties.each do |county| %>
+      <tr>
+        <td><%= county.name %></td>
+        <td><%= county.population %></td>
+        <td><%= link_to 'Show', state_county_path(@state, county) %> | </td>
+        <td><%= link_to 'Edit', edit_state_county_path(@state, county) %> | </td>
+        <td><%= link_to 'Destroy', state_county_path(@state, county), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "Back to State of #{@state.name}", state_path(@state) %> |
+<%= link_to 'New County', new_state_county_path(@state) %>
+

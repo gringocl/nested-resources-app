@@ -1,0 +1,21 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+Marion:
+  id: 1
+  name: Skagit
+  population: 100
+  state_id: 1
+
+King:
+  id: 2
+  name: King
+  population: 1000000
+  state_id: 1
+
+Charlotte:
+  id: 3
+  name: Charlotte
+  poulation: 100000
+  state_id: 3
+

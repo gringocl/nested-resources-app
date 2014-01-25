@@ -1,0 +1,6 @@
+<h1>Editing <%= @county.name %> County</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', [@state, @county] %> |
+<%= link_to "Back to #{@state.name} Counties", state_counties_path %>

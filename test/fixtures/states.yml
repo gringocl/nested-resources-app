@@ -1,24 +1,29 @@
 WA:
+  id: 1
   name: Washington
   population: 1000000
   abbreviation: WA
 
 FL:
+  id: 2
   name: Florida
   population: 10000000
   abbreviation: WA
 
 NC:
+  id: 3
   name: North Carolina
   population: 10000
   abbreviation: WA
 
 HI:
+  id: 4
   name: Hawaii
   population: 1000
   abbreviation: WA
 
 LA:
+  id: 5
   name: Louisiana
   population: 100
   abbreviation: WA
