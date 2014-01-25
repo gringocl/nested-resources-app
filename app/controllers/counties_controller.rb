@@ -1,33 +1,30 @@
 class CountiesController < ApplicationController
   #before_action :set_county, only: [:show, :edit, :update, :destroy]
+  before_action :set_state, only: [:index, :show, :new, :edit, :create, :update]
+
 
   # GET /state/:state_id/counties
   def index
-    @state = State.find(params[:state_id])
     @counties = @state.counties
   end
 
   # GET /states/:state_id/counties/:id
   def show
-    @state = State.find(params[:state_id])
     @county = @state.counties.find(params[:id])
   end
 
   # GET /states/:state_id/counties/new
   def new
-    @state = State.find(params[:state_id])
     @county = @state.counties.new
   end
 
   # GET /states/:state_id/counties/:id/edit
   def edit
-    @state = State.find(params[:state_id])
     @county = @state.counties.find(params[:id])
   end
 
   # POST /states/:state_id/counties/:id
   def create
-    @state = State.find(params[:state_id])
     @county = @state.counties.new(county_params)
 
     respond_to do |format|
@@ -43,7 +40,6 @@ class CountiesController < ApplicationController
 
   # PATCH/PUT /state/:state_id/counties/:id
   def update
-    @state = State.find(params[:state_id])
     @county = County.find(params[:id])
 
     respond_to do |format|
@@ -71,6 +67,10 @@ class CountiesController < ApplicationController
   private
 
     # Use callbacks to share common setup or constraints between actions.
+    def set_state
+      @state = State.find(params[:state_id])
+    end
+
     def set_county
       @county = County.find(params[:id])
     end
