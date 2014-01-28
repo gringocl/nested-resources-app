@@ -16,9 +16,9 @@
       <tr>
         <td><%= county.name %></td>
         <td><%= county.population %></td>
-        <td><%= link_to 'Show', state_county_path(@state, county) %> | </td>
-        <td><%= link_to 'Edit', edit_state_county_path(@state, county) %> | </td>
-        <td><%= link_to 'Destroy', state_county_path(@state, county), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', [ :show, @state, county ] %> | </td>
+        <td><%= link_to 'Edit', [ @state, county ] %> | </td>
+        <td><%= link_to 'Destroy', [ @state, county ], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
